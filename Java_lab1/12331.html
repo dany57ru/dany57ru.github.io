@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        let age = Math.floor(Math.random() * (100 - 1)) + 1;
+    
+        var gender_r = ["М", "Ж"];
+        var r = Math.floor(Math.random() * gender_r.length);
+    
+        if (age <= 17) { alert("Вам работать ещё рано — учитесь") }
+    
+        else {
+            if (gender_r[r] == "М") {
+                if (18 <= age && age <= 59) { alert("Вам ещё работать и работать") } else {
+                    if (60 <= age && age <= 64) { alert("Скоро пенсия") } else {
+                        if (age == 65) { alert("Вам пора на пенсию") } else { alert("Да кто ты такой?") }
+                    }
+                }
+            }
+            else {
+                if (18 <= age && age <= 54) { alert("Вам ещё работать и работать") } else {
+                    if (55 <= age && age <= 59) { alert("Скоро пенсия") } else {
+                        if (age == 60) { alert("Вам пора на пенсию") } else { alert("Да кто ты такой?") }
+                    }
+                }
+            }
+        };
+    
+</body>
+</html>
