@@ -15,12 +15,16 @@
         let n;
         var lst=[];
         for (let i = 2; i<num; i++)
-        { 
+        {
+            k=0
+            for (let j=2; j<i; j++)
+            { 
             if(i%j==0) n+=1;
         }
         if (n==0)
         {
             lst.push(i)
+        }
         }
         alert(lst)
     </script>
