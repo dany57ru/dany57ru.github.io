@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-    "use strict"
-    let num=prompt("введи число")
-    let b
-    if (num%10==1) {b=1} else{
-        if (num%10==2 || num%10==3 || num%10==4) {b=2} else {b=3}
-    }
+        "use strict"
+        let num = prompt("вводи число")
+        let b
+        if ((Math.floor((num % 100) / 10) == 1)) { b = 3 }
+        else {
+            {
+                if (num % 10 == 1) { b = 1 }
+                else {
+                    if (num % 10 == 2 || num % 10 == 3 || num % 10 == 4
+                    ) { b = 2 } else { b = 3 }
+                }
+            }
+        }
 
-switch(b){
-    case 1:
-        alert("На ветке сидит"+" "+num+" "+"ворона");
-        break;
-    case 2:
-        alert("На ветке сидят"+" "+num+" "+"воронЫ");
-        break;
-    case 3:
-        alert("На ветке сидят"+" "+num+" "+"ворон");
-        break;
-}      
-
+        switch (b) {
+            case 1:
+                alert("На ветке сидит" + " " + num + " " + "воронA");
+                break;
+            case 2:
+                alert("На ветке сидят" + " " + num + " " + "воронЫ");
+                break;
+            case 3:
+                alert("На ветке сидят" + " " + num + " " + "ворон");
+                break;
+        }      
     </script>
 </body>
+
 </html>
