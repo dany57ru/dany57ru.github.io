@@ -1,32 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
 </head>
-<link rel="stylesheet" href="calculator.css">
-<body bgcolor= "#000000" text= "gold">
-        <form name="calculator" >
-        <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
-        <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
-        <input type="button" value="3" onClick="document.calculator.ans.value+='3'"><br>
-        <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
-        <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
-        <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
-        <input type="button" value="7" onClick="document.calculator.ans.value+='7'"><br>
-        <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
-        <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
-        <input type="button" value="-" onClick="document.calculator.ans.value+='-'">
-        <input type="button" value="+" onClick="document.calculator.ans.value+='+'"><br>
-        <input type="button" value="*" onClick="document.calculator.ans.value+='*'">
-        <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
-        
-        <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
-        <input type="reset" value="Reset">
-        <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
-        <br>Решение <input type="textfield" name="ans" value="">
-        </form>
+<body>
+    <section>
+        <div class="container">
+            <div id="display"></div>
+            <div class="buttons">
+                <div class="button">C</div>
+                <div class="button">/</div>
+                <div class="button">*</div>
+                <div class="button">&larr;</div>
+                <div class="button">7</div>
+                <div class="button">8</div>
+                <div class="button">9</div>
+                <div class="button">-</div>
+                <div class="button">4</div>
+                <div class="button">5</div>
+                <div class="button">6</div>
+                <div class="button">+</div>
+                <div class="button">1</div>
+                <div class="button">2</div>
+                <div class="button">3</div>
+                <div class="button">.</div>
+                <div class="button">(</div>
+                <div class="button">0</div>
+                <div class="button">)</div>
+                <div id="equal" class="button">=</div>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
 </body>
 </html>
