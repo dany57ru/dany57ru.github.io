@@ -1,44 +1,9 @@
-.container {
-  max-width: 400px;
-  margin: 10vh auto 0 auto;
-  box-shadow: 0px 0px 43px 17px rgba(153,153,153,1);
-}
-
-#display {
-  text-align: right;
-  height: 70px;
-  line-height: 70px;
-  padding: 16px 8px;
-  font-size: 25px;
-}
-
-.buttons {
-  display: grid;
-  border-bottom: 1px solid #999;
-  border-left: 1px solid#999;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.buttons > div {
-  border-top: 1px solid #999;
-  border-right: 1px solid#999;
-}
-
-.button {
-  border: 0.5px solid #999;
-  line-height: 100px;
-  text-align: center;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-#equal {
-  background-color: rgb(85, 85, 255);
-  color: white;
-}
-
-.button:hover {
-  background-color: #323330;
-  color: white;
-  transition: 0.5s ease-in-out;
+/* latin */
+@font-face {
+  font-family: 'Cookie';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cookie/v17/syky-y18lb0tSbf9kgqS.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
