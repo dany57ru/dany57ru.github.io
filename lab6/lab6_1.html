@@ -1,0 +1,120 @@
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <style>
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #container {
+            background: #ffffff;
+            width: 800px;
+            height: 400px;
+            margin: auto auto;
+            border: 10px solid #ffffff;
+
+        }
+
+        #header {
+            background: #93b5e7;
+            height: 100px;
+            border: 10px solid #ffffff;
+
+        }
+
+        #left {
+            background-image: url(left.png);
+            float: left;
+            height: 180px;
+            width: 200px;
+            border: 10px solid #ffffff;
+
+
+        }
+
+        #right {
+            background-image: url(right.png);
+            float: right;
+            height: 180px;
+            width: 200px;
+            border: 10px solid #ffffff;
+
+
+        }
+
+        #center {
+            width: 600px;
+            background: #ffffff;
+            border: 10px solid #ffffff;
+            margin: 0 200px;
+
+        }
+
+        #footer {
+            background: #aa9be2;
+            height: 100px;
+            border: 10px solid #ffffff;
+
+        }
+
+        li {
+            list-style-image: url(plus.png);
+        }
+    </style>
+</head>
+
+<body>
+    <style type="text/css">
+        /**
+ * styles for alert popup container
+ * should be injected into web page to set the alert container position on page properly
+ */
+
+        .adguard-alert-iframe {
+            width: 100%;
+            border: none;
+            position: fixed;
+            z-index: 1000;
+            top: 16px;
+            left: 0;
+            display: block;
+            margin: 0 auto;
+            color-scheme: light dark;
+            visibility: hidden;
+        }
+    </style>
+    <div id="container">
+        <div id="header"></div>
+        <div id="outer">
+            <div id="inner">
+                <div id="left">
+                    <ul>
+                        <li><a href="#">Камень</a></li>
+                        <li><a href="#">Ножницы</a></li>
+                        <li><a href="#">Бумага</a></li>
+                    </ul>
+                </div>
+                <div id="right">right</div>
+                <div id="center">center center center center center center center center center center center center
+                    center center center center center center center center center center center center center center
+                    center center center center center center center center center center center center center center
+                    center center center center center center center center center center center center center center
+                    center center center center center center center center center center center center center center
+                    center center center center center center center center center center center center center center
+                </div>
+                <div id="end" class="clearfix"></div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+
+</body>
+
+</html>
