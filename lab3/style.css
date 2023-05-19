@@ -1,18 +1,16 @@
-        html {
-        body {
-            background: #000000;
-            color: rgb(252, 252, 252);
-        }
-        p {
-           text-align: right; 
-        }
-        h1,h2 {
-            text-align: right;
-            color: red;
-            font-family:Verdana, Geneva, Tahoma, sans-serif
-        }
-        em {
-            font-style: italic;
-            color: rgb(76, 202, 76);
-        }
-        }
+body {
+    background: #1e1e1e;
+    color: rgb(252, 252, 252);
+}
+p {
+   text-align: right; 
+}
+h1,h2 {
+    text-align: right;
+    color: red;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+em {
+    font-style: italic;
+    color: rgb(76, 202, 76);
+}
