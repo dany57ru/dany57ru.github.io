@@ -23,21 +23,20 @@
 </head>
 
 <body>
-    <script src="lab3.js"></script>
+    <!-- <script src="lab3.js"></script> -->
     <!-- скрипт со спецификацией -->
     <script type="module">
-        //  import {
-            //  getDecimal,
-        //     // ucFirst,
-        //     // checkSpam,
-        //     // truncate,
-        //     // camelize,
-        //     // fibs,
-        //     // arrReverseSorted,
-        //     // unique
-        //  } from './lab3.js';
-        // import{ucFirst,
-        //fib}  from './laba2_1.js';
+         import {
+             getDecimal,
+             ucFirst,
+             checkSpam,
+             truncate,
+             camelize,
+             fibs,
+             arrReverseSorted,
+             unique
+         } from './lab3.js';
+        // import fib  from './laba2_1.js';
 
         describe("getDecimal", function () {
 
@@ -103,6 +102,14 @@
 
             it("camelize('person__eye--blue') => 'person__eyeBlue'", function () {
                 assert.strictEqual(camelize('person__eye--blue'), 'person__eyeBlue');
+            });
+
+        });
+
+        describe("fibs", function () {
+
+            it("fibs(5) => [0n, 1n, 1n, 2n, 3n]", function () {
+                assert.deepEqual(fibs(5), [0n, 1n, 1n, 2n, 3n]);
             });
 
         });
