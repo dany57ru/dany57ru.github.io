@@ -1,7 +1,8 @@
+"use strict"
 function isEmpty(obj) {
     return obj.hasOwnProperty()
 }
-let book1 = new Object(); 
+let book1 = new Object();
 book1 = {
     title: "Фиорефикано",
     pubYear: 2013,
@@ -10,7 +11,7 @@ book1 = {
         console.log(this.title);
         console.log(this.price);
     }
-};  
+};
 
 console.log(isEmpty(book1));
 
