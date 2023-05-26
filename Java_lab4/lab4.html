@@ -10,14 +10,38 @@
 
 <body>
     <script>
+        "use strict"
+        function isEmpty(obj) {
+            return obj.hasOwnProperty()
+        }
+
+        show: function () {
+        console.log(this.title);
+        console.log(this.price);
+        }
+
+
         let book1 = {}
         book1.title = "Фиорэфикано";
         book1.pubYear = "2013";
         book1.price = "2001";
+        console.log(isEmpty(book1));
+
+        book1.show = function showBook() {
+        console.log(this.title);
+        console.log(this.price);
+        }
+        
         let book2 = {}
         book2.title = "Чинпачо";
         book2.pubYear = "2013";
         book2.price = "2000";
+        console.log(isEmpty(book2));
+
+        book2.show = function showBook() {
+        console.log(this.title);
+        console.log(this.price);
+        }
 
         for (let key in book1) {
             if (book1.hasOwnProperty(key)) {
