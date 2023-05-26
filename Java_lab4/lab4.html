@@ -35,8 +35,6 @@ book2.price = 2010;
 for (let i in book2) console.log(book2[i]);
 console.log(isEmpty(book2));
 
-book1.show();
-
 book2.show = function showBook() {
     console.log(this.title);
     console.log(this.price);
