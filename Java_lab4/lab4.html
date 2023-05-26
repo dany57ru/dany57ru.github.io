@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-<script>
-    let book1 = {
-        title:"Книга1",
-        pubYear: 2007,
-        price:202,
 
-           }
-    let book2 = {}
-    book1.title="Чинпачо";
-    book1.pubYear="2013";
-    book1.price="2000";
-    
-    for (let key in book1) {
-      if(book1.hasOwnProperty(key)){
-        console.log(`${key} : ${book1[key]}`)
-      }
-    }
-    console.log("_____")
-    for (let key in book2) {
-      if(book2.hasOwnProperty(key)){
-        console.log(`${key} : ${book2[key]}`)
-      }
-    }
-   </script>     
+<body>
+    <script>
+        let book1 = {
+            book1.title = "Фиорэфикано";
+            book1.pubYear = "2013";
+            book1.price = "2001";
+
+        }
+        let book2 = {}
+        book2.title = "Чинпачо";
+        book2.pubYear = "2013";
+        book2.price = "2000";
+
+        for (let key in book1) {
+            if (book1.hasOwnProperty(key)) {
+                console.log(`${key} : ${book1[key]}`)
+            }
+        }
+        console.log("_____")
+        for (let key in book2) {
+            if (book2.hasOwnProperty(key)) {
+                console.log(`${key} : ${book2[key]}`)
+            }
+        }
+    </script>
 </body>
+
 </html>
