@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <script>
-        "use strict"
-        function isEmpty(obj) {
+function isEmpty(obj) {
     return obj.hasOwnProperty()
 }
 let book1 = new Object(); 
@@ -43,8 +30,3 @@ book2.show = function showBook() {
 }
 
 book2.show();
-
-    </script>
-</body>
-
-</html>
