@@ -7,18 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        let book1 = {     
-        title : "книга" ,
-        pubYear : 2007,
-        price : 10000
-        }
-        alert( book1.title + "\n" + book1.pubYear + "\n" + book1.price + " " + "рублей" );
-        let book2 = {     
-        title : "книга2" ,
-        pubYear : 2008,
-        price : 10001
-        }
-        </script>
+<script>
+    let book1 = {
+        title:"Книга1",
+        pubYear: 2007,
+        price:202,
+
+           }
+    let book2 = {}
+    book1.title="Чинпачо";
+    book1.pubYear="2013";
+    book1.price="2000";
+    
+    for (let key in book1) {
+      if(book1.hasOwnProperty(key)){
+        console.log(`${key} : ${book1[key]}`)
+      }
+    }
+    console.log("_____")
+    for (let key in book2) {
+      if(book2.hasOwnProperty(key)){
+        console.log(`${key} : ${book2[key]}`)
+      }
+    }
+   </script>     
 </body>
 </html>
