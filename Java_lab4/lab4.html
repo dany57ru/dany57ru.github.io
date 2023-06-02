@@ -24,14 +24,16 @@ book1 = {
         console.log(this.price);
     }
 };
-
+for (let i in book1) console.log(book1[i]);
 console.log(isEmpty(book1));
+
+
 
 
 let book2 = new Object();
 book2.title = "Чинпачо",
-book2.pubYear = 2013;
-book2.price = 2010;
+book2.pubYear = 2014;
+book2.price = 210;
 
 for (let i in book2) console.log(book2[i]);
 console.log(isEmpty(book2));
