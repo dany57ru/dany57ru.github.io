@@ -14,7 +14,7 @@
     if (dd <= 10) dd = '0' + dd;
   
     var mm = date.getMonth() + 1;
-    if (mm <= 10) mm = mm;
+    if (mm <= 10) mm = "0" mm;
   
     var yy = date.getFullYear() % 100;
     if (yy <= 10) yy = '0' + yy;
@@ -22,7 +22,7 @@
     return dd + '.' + mm + '.' + yy;
   }
   
-  var d = new Date(2003, 8, 20); 
+  var d = new Date(2003, 9, 20); 
 console.log(`День рождения ${formatDate(d)}`)
     </script>
 </body>
