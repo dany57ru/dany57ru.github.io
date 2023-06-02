@@ -2,36 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <script>
-        "use strict"
-        function isEmpty(obj) {
-            return obj.hasOwnProperty()
-        }
-        let book1 = new Object();
-        book1.title = "Фиорефикано",
-            book1.pubYear = 2013;
-        book1.price = 321;
+  <script>
+    "use strict";
+    function isEmpty(obj) {
+      return obj.hasOwnProperty()
+    }
+    let book1 = new Object(); // синтаксис "конструктор объекта"
+    book1 = {
+      title: "Чинчипа",
+      pubYear: 2013,
+      price: 2400,
+      show: function () {
+        console.log(this.title);
+        console.log(this.price);
+      }
+    };
+    console.log(isEmpty(book1));
+    let book2 = new Object();
+    book2.title = 'Пора работать!';
+    book2.pubYear = 2023;
+    book2.price = 0;
+    for (let i in book2) console.log(book2[i]);
+    console.log(isEmpty(book2));
+    book1.show();
+    book2.show = function showBook() {
+      console.log(this.title);
+      console.log(this.price);
+    }
+  </script>
+</body>
 
-        for (let i in book1) console.log(book1[i]);
-        console.log(isEmpty(book1));
-
-        let book2 = new Object();
-        book2.title = "Чинпачо",
-            book2.pubYear = 2014;
-        book2.price = 210;
-
-        for (let i in book2) console.log(book2[i]);
-        console.log(isEmpty(book2));
-
-
-    </script>
+</html>
+</script>
 </body>
 
 </html>
