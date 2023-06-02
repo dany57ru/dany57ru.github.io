@@ -11,10 +11,10 @@
 <body>
     <script>
         "use strict"
-        let num = prompt("Введите число");
+        let smpl = prompt("Введите число");
         let k;
         var lst = [];
-        for (let i = 2; i <= num; i++) {
+        for (let i = 2; i <= smpl; i++) {
             k = 0
             for (let j = 2; j < i; j++) {
                 if (i % j == 0) k += 1;
@@ -23,7 +23,7 @@
                 lst.push(i)
             }
         }
-        alert("Все простые числа до " + num + ": " + lst);
+        alert("Все простые числа до " + smpl + ": " + lst);
     </script>
 
 </body>
