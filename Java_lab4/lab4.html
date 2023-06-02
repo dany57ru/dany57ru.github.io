@@ -10,40 +10,28 @@
 
 <body>
     <script>
-    "use strict"
-function isEmpty(obj) {
-    return obj.hasOwnProperty()
-}
-let book1 = new Object();
-book1 = {
-    title: "Фиорефикано",
-    pubYear: 2013,
-    price: 321,
-    show: function () {
-        console.log(this.title);
-        console.log(this.price);
-    }
-};
+        "use strict"
+        function isEmpty(obj) {
+            return obj.hasOwnProperty()
+        }
+        let book1 = new Object();
+        book1.title: "Фиорефикано",
+            book1.pubYear: 2013,
+                book1.price: 321,
+
 for (let i in book1) console.log(book1[i]);
-console.log(isEmpty(book1));
+        console.log(isEmpty(book1));
+
+        let book2 = new Object();
+        book2.title = "Чинпачо",
+            book2.pubYear = 2014;
+        book2.price = 210;
+
+        for (let i in book2) console.log(book2[i]);
+        console.log(isEmpty(book2));
 
 
-
-
-let book2 = new Object();
-book2.title = "Чинпачо",
-book2.pubYear = 2014;
-book2.price = 210;
-
-for (let i in book2) console.log(book2[i]);
-console.log(isEmpty(book2));
-
-book2.show = function showBook() {
-    console.log(this.title);
-    console.log(this.price);
-}
-
-</script>
+    </script>
 </body>
 
 </html>
