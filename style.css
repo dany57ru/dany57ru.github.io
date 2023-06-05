@@ -32,3 +32,32 @@ ol {
 h1 {
     margin: auto 0;
 }
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+
+.menu .title {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu .title::before {
+    content: '▶';
+    font-size: 80%;
+    color: green;
+    display: inline-block;
+    width: 18px;
+
+}
+
+.menu.open .title::before {
+    content: '▼';
+}
+
+.menu.open ul {
+    display: block;
+}
