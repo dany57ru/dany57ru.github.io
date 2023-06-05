@@ -1,31 +1,34 @@
-#conteiner{
+#conteiner {
     width: 1300px;
     margin: 0 auto;
 }
-body{
+
+body {
     background: linear-gradient(0deg, #73fa7a 0%, #8ff8ff 100%, #fdff9b 100%);
 
 }
 
 
-#left{
+#left {
     width: 600px;
     float: left;
     min-height: 1000px;
     margin-right: 20px;
-    
+
 }
-#right{
+
+#right {
     width: 750px;
     min-height: 1000px;
     margin-left: 50%;
-    
+
 }
+
 ol {
     list-style-type: none;
-    
+
 }
-h1{
+
+h1 {
     margin: auto 0;
 }
-    
