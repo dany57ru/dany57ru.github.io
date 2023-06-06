@@ -17,7 +17,7 @@
         area.hidden = true;
 
         document.onkeydown = function (e) {
-            if (e.ctrlKey && e.keyCode == '69') {  //69 = e
+            if (e.ctrlKey && e.keyCode == '69') {  // e
                 view.hidden = true;
                 area.hidden = false;
                 area.focus()
@@ -25,16 +25,16 @@
                 return false;
             }
 
-            if (e.ctrlKey && e.keyCode == '83') { //83 = s
+            if (e.ctrlKey && e.keyCode == '83') { // s
                 view.hidden = false;
                 area.hidden = true;
                 view.innerHTML = area.value;
                 return false;
-            } else if (e.keyCode == '27') {
+            } else if (e.keyCode == '27')  { // esc
                 view.hidden = false;
                 area.hidden = true;
             }
-            //27 = esc
+            
         };
 
     </script>
