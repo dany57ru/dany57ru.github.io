@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         function getSecondsToday() {
-  let now = new Date();
+            let now = new Date();
 
-  let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
-  let diff = now - today;
-  return Math.round(diff / 1000); 
-}
+            let diff = now - today;
+            return Math.round(diff / 1000);
+        }
 
-console.log( getSecondsToday() );
+        console.log(getSecondsToday());
 
     </script>
 </body>
+
 </html>

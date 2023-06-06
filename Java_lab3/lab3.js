@@ -1,13 +1,13 @@
-import {fib} from "./lab2.js";
+import { fib } from "./lab2.js";
 
-export function getDecimal(num){
+export function getDecimal(num) {
    let res = 0;
    if (num >= 0) {
       let cel = Math.trunc(num);
       res = num - cel;
-      return Math.floor(res * 100) / 100; 
+      return Math.floor(res * 100) / 100;
    } else {
-     let cel = Math.floor(num);
+      let cel = Math.floor(num);
       return num - cel;
    }
 }
@@ -19,7 +19,7 @@ export function getDecimal(num){
  * @return {number} дробная часть числа.
  */
 
-export function ucFirst(str){
+export function ucFirst(str) {
    if (!str) return str;
    else return str[0].toUpperCase() + str.slice(1);
 }
@@ -31,10 +31,10 @@ export function ucFirst(str){
  * @return {string} str с заглавным первым символом.
  */
 
-export function checkSpam(str){
+export function checkSpam(str) {
    let strNew = str.toLowerCase();
    let strNew1 = str.toUpperCase();
-  return strNew.includes("xxx") || strNew.includes("viagra") || strNew1.includes("XXX") || strNew1.includes("VIAGRA") ;
+   return strNew.includes("xxx") || strNew.includes("viagra") || strNew1.includes("XXX") || strNew1.includes("VIAGRA");
 }
 
 /**
@@ -44,9 +44,9 @@ export function checkSpam(str){
  * @return {boolean} true, если строка str содержит 'viagra' или 'XXX', а иначе false.
  */
 
-export function truncate(str, maxlength){
-   if(str.length > maxlength){
-      let strNew = str.slice(0, maxlength-1) + '…';
+export function truncate(str, maxlength) {
+   if (str.length > maxlength) {
+      let strNew = str.slice(0, maxlength - 1) + '…';
       return strNew;
    } else return str;
 }
@@ -61,18 +61,18 @@ export function truncate(str, maxlength){
  * @return {string} str, усеченная строка.
  */
 
-export function camelize(str){
+export function camelize(str) {
    //let str = "fgcf-gjdt-cg";
    let strArr = str.split("-");
    let strNew = ""
-     for (let i = 0; i <= strArr.length - 1; i++){
+   for (let i = 0; i <= strArr.length - 1; i++) {
       if (i == 0) {
          strNew = strArr[0];
       } else strNew += ucFirst(strArr[i]);
-      
-      } return strNew;   
-      
-}  
+
+   } return strNew;
+
+}
 
 /**
  * Дефисы в строке удаляются, а все слова 
@@ -84,9 +84,9 @@ export function camelize(str){
 
 export function fibs(n) {
    let arr = [];
-   for (let i = 0; i < n; i++){
+   for (let i = 0; i < n; i++) {
       arr.push(fib(i));
-   } return (arr);  
+   } return (arr);
 }
 
 /**
@@ -103,18 +103,18 @@ export function arrReverseSorted(arr) {
       if (a > b) return -1;
       if (a == b) return 0;
       if (a < b) return 1;
-    }
-    arr.sort(compareNumeric);
-    return arr;
-
    }
+   arr.sort(compareNumeric);
+   return arr;
 
-   /**
- * Возвращает массив из элементов, отсортированный по убыванию.
- *
- * @param {Array} arr массив элементов.
- * @return {Array} arr, массив, отсортированный по убыванию.
- */
+}
+
+/**
+* Возвращает массив из элементов, отсортированный по убыванию.
+*
+* @param {Array} arr массив элементов.
+* @return {Array} arr, массив, отсортированный по убыванию.
+*/
 
 export function unique(arr) {
    return Array.from(new Set(arr));
