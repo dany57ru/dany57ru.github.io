@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <textarea id="area" autofocus></textarea>
+    <div id="view">Text</div>
+
+
+    <script>
+
+        area.hidden = true;
+
+        document.onkeydown = function (e) {
+            if (e.ctrlKey && e.keyCode == '69') {  //69 = e
+                view.hidden = true;
+                area.hidden = false;
+                area.focus()
+                area.innerHTML = view.innerHTML;
+                return false;
+            }
+
+            if (e.ctrlKey && e.keyCode == '83') { //83 = s
+                view.hidden = false;
+                area.hidden = true;
+                view.innerHTML = area.value;
+                return false;
+            } else if (e.keyCode == '27') {
+                view.hidden = false;
+                area.hidden = true;
+            }
+            //27 = esc
+        };
+
+    </script>
+
+</body>
