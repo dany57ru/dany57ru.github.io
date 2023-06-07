@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -359,7 +360,15 @@
         </tbody>
     </table>
     <script>
-        /* ваш код */
+         let table = document.body.firstElementChild;
+
+for (let i = 1; i < table.rows.length - 1 ; i++) {
+    let row = table.rows[i];
+    for (let j = 1; j < row.cells.length - 2; j += 2) {
+        row.cells[((i + 1) % 2) + j].style.backgroundColor = '#ffce9e';
+        row.cells[((i + 2) % 2) + j].style.backgroundColor = '#d18b47';
+    }
+}
     </script>
 </body>
 
