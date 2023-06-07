@@ -12,19 +12,19 @@
 
         function formatDate(date) {
 
-            var dd = date.getDate();
-            if (dd < 10) dd = '0' + dd;
+            var d = date.getDate();
+            if (d < 10) d = '0' + d;
 
-            var mm = date.getMonth() + 1;
-            if (mm < 10) mm = "0" + mm;
+            var m = date.getMonth() + 1;
+            if (m < 10) m = "0" + m;
 
             var yy = date.getFullYear() % 100;
-            if (yy < 10) yy = '0' + yy;
+            if (yy < 10) y = '0' + y;
 
-            return dd + '.' + mm + '.' + yy;
+            return d + '.' + m + '.' + y;
         }
 
-        var d = new Date(2003, 9, 20);
+        let d = new Date(2003, 9, 20);
         console.log(`День рождения ${formatDate(d)}`)
     </script>
 </body>

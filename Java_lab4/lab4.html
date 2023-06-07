@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Object </title>
 </head>
 
 <body>
@@ -12,34 +13,38 @@
         "use strict";
         function isEmpty(obj) {
             return obj.hasOwnProperty()
+
         }
-        let book1 = new Object(); // синтаксис "конструктор объекта"
+        let book1 = new Object();
         book1 = {
-            title: "Чинчипа",
-            pubYear: 2013,
-            price: 2400,
+            title: "Маленький принц",
+            pubYear: 2020,
+            price: 210,
             show: function () {
                 console.log(this.title);
                 console.log(this.price);
             }
         };
         console.log(isEmpty(book1));
+
         let book2 = new Object();
-        book2.title = 'Пора работать!';
-        book2.pubYear = 2023;
-        book2.price = 0;
-        for (let i in book2) console.log(book2[i]);
+        book2.title = "Повелитель";
+        book2.pubYear = 2012;
+        book2.price = 800;
+
+        for (let i in book2) {
+            console.log(book2[i]);
+        };
+
         console.log(isEmpty(book2));
         book1.show();
-        book2.show = function showBook() {
+        function showBook() {
             console.log(this.title);
             console.log(this.price);
-        }
+        };
+        book2.show = showBook;
+        book2.show();
     </script>
-</body>
-
-</html>
-</script>
 </body>
 
 </html>
