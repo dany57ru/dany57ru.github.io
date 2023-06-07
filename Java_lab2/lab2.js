@@ -1,91 +1,113 @@
+/**
+ * Возвращает x, возведённое в n-ную степень.
+ *
+ * @param {number} x Возводимое в степень число.
+ * @param {number} n Степень, должна быть натуральным числом.
+ * @return {number} x, возведённое в n-ную степень.
+ */
 function pow(x, n) {
     return x ** n;
 }
 
-/**
- * Возвращает a, возведённое в b-ную степень.
- *
- * @param {number} a Возводимое в степень число.
- * @param {number} b Степень, должна быть натуральным числом.
- * @return {number} a ** b, возведённое в n-ную степень.
- */
 
-function sumTo(n) {
-    return (n * (n + 1)) / 2
-
-}
 
 /**
  * Возвращает сумму чисел от 1 до n включительно.
- * @param {number} n Число, до которого вычисляется сумма, должно быть натуральным числом.
- * @return {number} sum, сумму чисел от 1 до n включительно.
+ *
+ * @param {number} n Вводимое число.
+ * @return {number} sum, сумма от 1 до n.
  */
-
-function factorial(n) {
-    if (n <= 0) {
-        return 1n;
+function sumTo(n) {
+    let i = 0;
+    let sum = 0;
+    while (i <= n) {
+        sum = n * (n + 1) / 2;
+        i++;
     }
-    else {
-        return (BigInt(n) * BigInt(factorial(n - 1)));
-    }
+    return sum;
 }
 
+
+
 /**
- * Возвращает факториал числа n!.
- * @param {number} n Число, факториал которого вычисляется, должно быть натуральным числом.
- * @return {number} res, факториал числа n!.
- */
+* Возвращает  факториал числа n!, используя рекурсивный вызов n!= n*(n-1)!.
+*
+* @param {number} n Вводимое число.
+* @return {BigInt} n!
+*/
+function factorial(n) {
+    if (n == 0n || n == 1n) {
+        return 1n;
+    } else {
+        return BigInt(n) * BigInt(factorial(n - 1));
+    }
+
+}
+
+
+
+
+/**
+* Возвращает n-е число Фибоначчи.
+*
+* @param {number} n Вводимое число.
+* @return {BigInt} sum, n-е число Фибоначчи.
+*/
+
+
+
 
 function fib(n) {
-    a = BigInt(1);
-    b = BigInt(1);
-    if (n == BigInt(0)) {
-        return BigInt(0);
-    }
-    else {
-        for (i = BigInt(3); i <= n; i++) {
-            c = a + b;
+    let a = 1n;
+    let b = 1n;
+    if (n == 0n) {
+        return 0n;
+    } else {
+        for (let i = 3n; i <= n; i++) {
+            let c = a + b;
             a = b;
             b = c;
         }
         return b;
     }
+
 }
 
+
+
+
 /**
- * Возвращает n-е число Фибоначчи.
- * @param {number} n Порядковый номер числа Фибоначчи, должен быть натуральным числом.
- * @return {number} b, n-е число Фибоначчи.
+ * Принимает целочисленное значение x и возвращает анонимную функцию
+ *
+ * @param {number} x целочисленное значение.
+ * @return {function} функция сравнния у с х, которая возвращает true, false or null
  */
-
-
 function compare(x) {
     return function (y) {
-        if (y > x) return true;
-        else if (y < x) return false;
-        else if (y == x) return null;
+        if (y > x) {
+            return true;
+        } else if (y < x) {
+            return false;
+        } else if (y == x) {
+            return null;
+        }
     }
 }
 
-/**
- * Возвращает результат сравнения значений y и x.
- * @param {number} x Первый аргумент, должен быть целочисленным.
- * @param {number} y Второй аргумент, должен быть целочисленным.
- * @return {function} Анонимная функция, которая вернет true, false или null
- }} Результат сравнения.
- */
 
 
-function sum() {
-    var result = 0;
-    for (var i = 0; i < arguments.length; i++) {
-        result += arguments[i]
-    }
-    return result;
-}
 
 /**
  * Возвращает сумму всех своих аргументов.
- * @param {number} Значения аргументов.
- * @return {number} result, сумма всех своих аргументов.
+ *
+ * @param {number} () принимаемые значения.
+ * @return {...values: number[]} result, сумму всех своих аргументов.
  */
+function sum() {
+    let result = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        result += arguments[i];
+    }
+
+    return result;
+}
