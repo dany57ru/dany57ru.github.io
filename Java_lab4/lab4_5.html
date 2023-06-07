@@ -12,13 +12,13 @@
         "use strict"
         function formatDate(date) {
 
-            var d = date.getDate();
+            let d = date.getDate();
             if (d < 10) d = '0' + d;
 
-            var m = date.getMonth() + 1;
+            let m = date.getMonth() + 1;
             if (m < 10) m = "0" + m;
 
-            var y = date.getFullYear() % 100;
+            let y = date.getFullYear() % 100;
             if (y < 10) y = '0' + y;
 
             return d + '.' + m + '.' + y;
