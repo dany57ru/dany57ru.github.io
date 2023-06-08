@@ -22,35 +22,31 @@
 </head>
 
 <body>
-    <div id="password_input">
+    <div>
         <label for="password"></label>
         <input id="password" type="password" class='data-placeholder' data-placeholder="Введите пароль">
     </div>
 
     <script>
-        'use strict';
-        let ps = document.getElementById("password_input");
-
-        let input = ps.getElementsByTagName("input")[0];
-        let lb = ps.getElementsByTagName("label")[0];
-        lb.style.display = "none";
-
-        input.setAttribute("placeholder", input.dataset.placeholder);
-        lb.innerHTML = input.dataset.placeholder;
-
-        input.addEventListener("focus", function () {
-            lb.style.display = "block";
-            input.setAttribute("placeholder", "");
-        });
-
-        input.addEventListener("blur", function () {
-
-            lb.style.display = "none";
-            input.setAttribute("placeholder", input.dataset.placeholder);
-
-        });
-
-    </script>
+        "use strict"
+        let input = document.querySelector('input[data-placeholder]');
+        let div = document.querySelector('div');
+        //Добавляем плейсхолдер
+        input.value = input.getAttribute('data-placeholder');
+        
+        input.onfocus = function () {
+        div.innerHTML = input.getAttribute('data-placeholder');
+        input.setAttribute('data-placeholder', '');//при фокусировке на поле ввода, добавляется текст, указанный в атрибуте placeholder, внутрь div, а сам атрибут удаляется, чтобы текст внутри поля ввода и div совпадал
+        input.value = '';
+        };
+        
+        input.onblur = function () {
+        input.setAttribute('data-placeholder', div.innerHTML);
+        div.innerHTML = data-placeholder;//При потере фокуса происходит обратная операция: текст из div переносится в атрибут placeholder input, а содержимое div очищается
+        input.value = input.getAttribute('data-placeholder');
+        };
+        
+        </script>
 </body>
 
 </html>
