@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,20 +9,17 @@
 
 <body>
     <script>
-        "use strict";
+        'use strict'
         let nikita = { name: "Никита", age: 23 };
         let sereja = { name: "Серёжа", age: 20 };
         let danya = { name: "Даня", age: 19 };
         let people = [nikita, sereja, danya];
-        function ageSort(a, b) {
-            if (a > b) return 1;
-            if (a == b) return 0;
-            if (a < b) return -1;
+        function sorted(a, b) {
+            return a.age - b.age;
         }
+        people.sort(sorted);
 
-        people.sort(ageSort);
         for (let i in people) console.log(people[i]);
-
     </script>
 </body>
 
