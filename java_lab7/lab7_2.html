@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Placeholder</title>
     <style>
-        .placeholder {
+        ::placeholder {
             color: rgb(48, 62, 255);
         }
 
@@ -49,6 +50,12 @@
             input.setAttribute("placeholder", input.dataset.placeholder);
 
         });
+
+        input.onblur = function () {
+            input.setAttribute('data-placeholder', div.innerHTML);
+            div.innerHTML = data - placeholder;//При потере фокуса происходит обратная операция: текст из div переносится в атрибут placeholder input, а содержимое div очищается
+            input.value = input.getAttribute('data-placeholder');
+        };
 
     </script>
 </body>
