@@ -15,12 +15,11 @@
 <body>
     <div id="password">
         <label></label>
-        <input type="password" data-placeholder="enter password" />
+        <input type="password" class = 'data-placeholder' data-placeholder="enter password" />
     </div>
     <script>
         'use strict';
         let tf = document.getElementById("password");
-
         let input = tf.getElementsByTagName("input")[0];
         let lb = tf.getElementsByTagName("label")[0];
         lb.style.display = "none";
