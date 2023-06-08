@@ -33,7 +33,6 @@
         let ps = document.getElementById("password_input");
         let input = ps.getElementsByTagName("input")[0];
         let lb = ps.getElementsByTagName("label")[0];
-        let div = document.querySelector('div');
         lb.style.display = "none";
 
         input.setAttribute("placeholder", input.dataset.placeholder);
@@ -51,12 +50,6 @@
             input.setAttribute("placeholder", input.dataset.placeholder);
 
         });
-
-        input.onblur = function () {
-            input.setAttribute('data-placeholder', div.innerHTML);
-            div.innerHTML = data - placeholder;
-            input.value = input.getAttribute('data-placeholder');
-        };
 
     </script>
 </body>
