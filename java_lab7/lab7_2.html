@@ -1,49 +1,51 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <title> placeholder</title>
+    <meta charset="UTF-8" />
+    <title>data-placeholder</title>
     <style>
-        .placeholder::input-placeholder {
-            color: rgb(58, 85, 241);
-        }
+    .placeholder::placeholder {
+      color: rgb(58, 85, 241);
+    }
 
-        div {
-            color: rgb(58, 85, 241);
-        }
+    div {
+      color: rgb(58, 85, 241);
+    }
 
-        .data-placeholder {
-            color: rgb(58, 85, 241);
-        }
+    .data-placeholder {
+      color: rgb(58, 85, 241);
+    }
+  </style>
     </style>
+
 </head>
 
 <body>
-
-    <div>пароль</div>
-    <input type="password" class='data-placeholder' data-placeholder="Введите пароль">
-
+    <div id="password">
+        <label for='data-placeholder'>enter password</label>
+        <input type="password" id='data-placeholder' data-placeholder="enter password" />
+    </div>
     <script>
-        let input = document.querySelector('input[data-placeholder]');
-        let div = document.querySelector('div');
-        input.value = input.getAttribute('data-placeholder');
+        'use strict';
+        let ps = document.getElementById("password");
+        let input = ps.getElementsByTagName("input")[0];
+        let lb = ps.getElementsByTagName("label")[0];
+        lb.style.display = "none";
 
-        input.onfocus = function () {
-            div.innerHTML = input.getAttribute('data-placeholder');
-            input.setAttribute('data-placeholder', '');
-            input.value = '';
-        };
+        input.setAttribute("placeholder", input.dataset.placeholder);
+        lb.innerHTML = input.dataset.placeholder;
 
-        input.onblur = function () {
-            input.setAttribute('data-placeholder', div.innerHTML);
-            div.innerHTML = '';
-            input.value = input.getAttribute('data-placeholder');
-        };
+        input.addEventListener("blur", function () {
+            lb.style.display = "none";
+            input.setAttribute("placeholder", input.dataset.placeholder);
+        });
 
+        input.addEventListener("focus", function () {
+            lb.style.display = "block";
+            input.setAttribute("placeholder", "");
+        });
     </script>
-
-
 </body>
 
 </html>
