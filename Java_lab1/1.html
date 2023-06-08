@@ -12,7 +12,7 @@
     <script>
         "use strict";
         let age = prompt("Сколько вам лет?");
-        let gender = prompt("Вы мужчина или женщина? Укажите букву: М или Ж: ").toUpperCase();
+        let gender = prompt("Вы мужчина или женщина? Укажите букву: м/М или ж/Ж: ").toUpperCase();
         if (age < 18) {
             alert('Вам работать ещё рано — учитесь');
         } else if ((age >= 18 && ((gender == 'м') || (gender == 'М')) && age <= 59) || (age >= 18 && ((gender == 'ж') || (gender == 'Ж')) && age <= 54)) {
