@@ -53,7 +53,7 @@
 
         input.onblur = function () {
             input.setAttribute('data-placeholder', div.innerHTML);
-            div.innerHTML = data - placeholder;//При потере фокуса происходит обратная операция: текст из div переносится в атрибут placeholder input, а содержимое div очищается
+            div.innerHTML = data - placeholder;
             input.value = input.getAttribute('data-placeholder');
         };
 
