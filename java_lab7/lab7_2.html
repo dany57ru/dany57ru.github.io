@@ -36,13 +36,13 @@
         
         input.onfocus = function () {
         div.innerHTML = input.getAttribute('data-placeholder');
-        input.setAttribute('data-placeholder', '');//при фокусировке на поле ввода, добавляется текст, указанный в атрибуте placeholder, внутрь div, а сам атрибут удаляется, чтобы текст внутри поля ввода и div совпадал
+        input.setAttribute('data-placeholder', '');
         input.value = '';
         };
         
         input.onblur = function () {
         input.setAttribute('data-placeholder', div.innerHTML);
-        div.innerHTML = data-placeholder;//При потере фокуса происходит обратная операция: текст из div переносится в атрибут placeholder input, а содержимое div очищается
+        div.innerHTML = data-placeholder;
         input.value = input.getAttribute('data-placeholder');
         };
         
