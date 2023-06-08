@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <title>data-placeholder</title>
     <style>
-        ::placeholder {
+        .placeholder::-webkit-input-placeholder {
             color: rgb(94, 94, 219);
         }
     </style>
@@ -15,10 +15,11 @@
 <body>
     <div id="password">
         <label for = 'data-placeholder'>enter password</label>
-        <input type="password" class = 'data-placeholder' data-placeholder="enter password" />
+        <input type="password" id = 'data-placeholder' data-placeholder="enter password" />
     </div>
     <script>
         'use strict';
+        $('input').addClass('placeholder');
         let ps = document.getElementById("password");
         let input = ps.getElementsByTagName("input")[0];
         let lb = ps.getElementsByTagName("label")[0];
