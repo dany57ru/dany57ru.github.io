@@ -14,8 +14,8 @@
 
 <body>
     <div id="password">
-        <label for = 'data-placeholder'>enter password</label>
-        <input type="password" id = 'data-placeholder' data-placeholder="enter password" />
+        <label for='data-placeholder'>enter password</label>
+        <input type="password" id='data-placeholder' data-placeholder="enter password" />
     </div>
     <script>
         'use strict';
@@ -24,7 +24,7 @@
         let lb = ps.getElementsByTagName("label")[0];
         lb.style.display = "none";
 
-        input.setAttribute("placeholder", input.dataset.placeholder); 
+        input.setAttribute("placeholder", input.dataset.placeholder);
         lb.innerHTML = input.dataset.placeholder;
 
         input.addEventListener("blur", function () {
