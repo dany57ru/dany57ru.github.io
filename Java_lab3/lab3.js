@@ -1,5 +1,7 @@
 import {fib} from './lab2.js';
 
+
+
 /**
 * Возвращает дробную часть числа num.
 *
@@ -11,6 +13,8 @@ export function getDecimal(num) {
    else if (num < 0) return num - (-Math.ceil(-num));
    if (num > 1) return +(num - Math.trunc(num)).toFixed(2);
 }
+
+
 
 
 /**
@@ -28,6 +32,8 @@ export function ucFirst(str) {
 }
 
 
+
+
 /**
 * Возвращает true, если строка str содержит 'viagra' или 'XXX', а иначе false.
 *
@@ -38,6 +44,8 @@ export function checkSpam(str) {
    let newStr = str.toLowerCase(); //перевод к нижнему регистру
    return newStr.includes('viagra') || newStr.includes('xxx');
 }
+
+
 
 
 /**
@@ -53,6 +61,9 @@ export function truncate(str, maxlength) {
    if (str.length < maxlength) return str;
    else return str.slice(0, maxlength - 1) + '…';
 }
+
+
+
 
 
 /**
@@ -72,6 +83,10 @@ export function camelize(str) {
    return strNew;
 }
 
+
+
+
+
 /**
 * Возвращает массив, заполненный числами 
 * Фибоначчи до n-го числа (не включая его).
@@ -85,6 +100,11 @@ export function fibs(n) {
    return arr;
 }
 
+
+
+
+
+
 /**
 * Возвращает массив из элементов, отсортированный по убыванию.
 *
@@ -97,6 +117,11 @@ export function arrReverseSorted(arr) {
        return b - a; 
    }) 
 }
+
+
+
+
+
 
 /**
 * Возвращает массив уникальных, не повторяющихся значений.
